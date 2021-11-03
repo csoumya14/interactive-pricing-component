@@ -3,10 +3,8 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.header`
   text-align: center;
   width: 90%;
-  margin-top: 89px;
-
+  margin-top: 5rem;
   padding: 0.1rem;
-  font-family: 'Manrope', sans-serif;
 `;
 
 export const Heading = styled.h1`

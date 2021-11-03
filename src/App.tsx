@@ -3,6 +3,7 @@ import TopBackground from './container/TopBackground/TopBackground';
 import Header from './container/Header/Header';
 import SliderToggle from './container/SliderToggle/SliderToggle';
 import styled from 'styled-components';
+import GlobalStyle from './themes/GlobalStyles';
 
 const Main = styled.main`
   width: 100vw;
@@ -15,6 +16,7 @@ const Main = styled.main`
 function App() {
   return (
     <Main>
+      <GlobalStyle />
       <TopBackground />
       <Header />
       <SliderToggle />
@@ -23,3 +25,6 @@ function App() {
 }
 
 export default App;
+/*
+
+*/

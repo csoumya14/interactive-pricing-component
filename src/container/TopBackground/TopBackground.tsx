@@ -1,13 +1,8 @@
 import React from 'react';
-import { Div, Img } from './TopBackground.css';
-import circularPatterns from '../../assets/pattern-circles.svg';
+import { Div } from './TopBackground.css';
 
 const TopBackground = () => {
-  return (
-    <Div>
-      <Img src={circularPatterns} alt="" />
-    </Div>
-  );
+  return <Div></Div>;
 };
 
 export default TopBackground;
