@@ -1,4 +1,6 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { myTheme } from './themes/ThemeVariables';
 import TopBackground from './container/TopBackground/TopBackground';
 import Header from './container/Header/Header';
 import SliderToggle from './container/SliderToggle/SliderToggle';
@@ -15,12 +17,14 @@ const Main = styled.main`
 
 function App() {
   return (
-    <Main>
+    <ThemeProvider theme={myTheme}>
       <GlobalStyle />
-      <TopBackground />
-      <Header />
-      <SliderToggle />
-    </Main>
+      <Main>
+        <TopBackground />
+        <Header />
+        <SliderToggle />
+      </Main>
+    </ThemeProvider>
   );
 }
 

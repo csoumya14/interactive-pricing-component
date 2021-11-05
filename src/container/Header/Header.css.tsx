@@ -9,13 +9,19 @@ export const HeaderContainer = styled.header`
 
 export const Heading = styled.h1`
   font-size: 20px;
-  color: #293356;
+  color: ${props => props.theme.palette.neutral.darkDesaturatedBlue};
+  @media (min-width: ${props => props.theme.mediaSize.md}) {
+    font-size: 28px;
+  }
 `;
 
 export const Para1 = styled.p`
-  color: #848ead;
+  color: ${props => props.theme.palette.neutral.grayishBlue};
   font-size: 13px;
   line-height: 1.7em;
+  @media (min-width: ${props => props.theme.mediaSize.md}) {
+    font-size: 15px;
+  }
 `;
 
 export const Para2 = styled(Para1)`

@@ -3,15 +3,18 @@ import styled from 'styled-components';
 export const DiscountSpan = styled.span`
   width: 42px;
   height: 19px;
-  background: #feede8;
+  background: ${props => props.theme.palette.primary.lightGrayishRed};
   border-radius: 9.5px;
   font-weight: 800;
   font-size: 10px;
   margin-left: 1em;
   padding: 0.5em;
-  line-height: 14px;
-  color: #ff8d68;
+  line-height: 2;
+  color: ${props => props.theme.palette.primary.lightRed};
   text-align: center;
+  @media (min-width: ${props => props.theme.mediaSize.md}) {
+    font-size: 12px;
+  }
 `;
 
 export const VisuallyHiddenLegend = styled.legend`
@@ -35,8 +38,10 @@ export const RadioSwitchLabel = styled.label`
   cursor: pointer;
   font-weight: 600;
   font-size: 12px;
-
-  color: #848ead;
+  @media (min-width: ${props => props.theme.mediaSize.md}) {
+    font-size: 14px;
+  }
+  color: ${props => props.theme.palette.neutral.grayishBlue};
   :first-of-type {
     padding-right: 5em;
     &::before,
@@ -44,7 +49,6 @@ export const RadioSwitchLabel = styled.label`
       content: '';
       height: 2em;
       overflow: hidden;
-
       pointer-events: none;
       position: absolute;
       vertical-align: middle;
@@ -53,7 +57,6 @@ export const RadioSwitchLabel = styled.label`
       background: #fff;
       border-radius: 100%;
       position: absolute;
-
       transition: right 0.2s ease-in-out;
       right: 2px;
       top: 2px;
@@ -63,7 +66,7 @@ export const RadioSwitchLabel = styled.label`
     }
     &::after {
       border-radius: 1em;
-      background: #7aeadf;
+      background: ${props => props.theme.palette.primary.strongCyan};
       margin: 0 1em;
       transition: background 0.2s ease-in-out;
       width: 4em;
@@ -80,8 +83,6 @@ export const RadioSwitch = styled.fieldset`
   margin: 2.5rem auto;
   padding: 0;
   white-space: nowrap;
-  font-size: 0.825rem;
-
   &:focus-within ${RadioSwitchLabel} {
     :first-of-type {
       &::after {

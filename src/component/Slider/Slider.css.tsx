@@ -3,15 +3,8 @@ import iconSlider from '../../assets/icon-slider.svg';
 
 const height = '8px';
 const thumbHeight = 40;
-const trackHeight = '8px';
-
-// colours
 const trackColor = '#ECF0FB';
-const fillColor = '#A4F3EB';
-const thumbColor = '#10D8C4';
 const thumbHoverColor = '#000000';
-const upperBackground = `linear-gradient(to bottom, ${trackColor}, ${trackColor}) 100% 50% / 100% ${trackHeight} no-repeat transparent`;
-const lowerBackground = `linear-gradient(to bottom, ${fillColor}, ${fillColor}) 100% 50% / 100% ${trackHeight} no-repeat transparent`;
 
 const makeLongShadow = (color: string, size: string) => {
   let i = 8;
@@ -39,7 +32,7 @@ export const Input = styled.input`
   &::-webkit-slider-runnable-track {
     width: 100%;
     height: ${height};
-    background: ${lowerBackground};
+    background: ${props => props.theme.palette.primary.softCyan};
   }
 
   &::-webkit-slider-thumb {
@@ -47,7 +40,7 @@ export const Input = styled.input`
     appearance: none;
     height: ${thumbHeight}px;
     width: ${thumbHeight}px;
-    background: ${thumbColor};
+    background: ${props => props.theme.palette.primary.strongCyan};
     background-image: url(${iconSlider});
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -64,7 +57,7 @@ export const Input = styled.input`
     margin: 0;
     height: ${thumbHeight};
     width: ${thumbHeight};
-    background: ${thumbColor};
+    background: ${props => props.theme.palette.primary.strongCyan};
 
     background-repeat: no-repeat;
     border-radius: 100%;
@@ -82,22 +75,21 @@ export const Input = styled.input`
   }
 
   &::-ms-fill-lower {
-    background: ${lowerBackground};
+    background: ${props => props.theme.palette.primary.softCyan};
   }
 
   &::-ms-fill-upper {
-    background: ${upperBackground};
+    background: ${props => props.theme.palette.neutral.lightGrayishBlue};
   }
 
   &::-ms-thumb {
     appearance: none;
     height: ${thumbHeight};
     width: ${thumbHeight};
-    background: ${thumbColor};
-
+    background: ${props => props.theme.palette.primary.strongCyan};
     border-radius: 100%;
     border: 0;
-    transition: ${upperBackground} 100ms;
+    transition: ${props => props.theme.palette.neutral.lightGrayishBlue} 100ms;
     /* IE Edge thinks it can support -webkit prefixes */
     top: 0;
     margin: 0;

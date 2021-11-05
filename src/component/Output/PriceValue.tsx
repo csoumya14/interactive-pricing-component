@@ -10,8 +10,7 @@ const PriceValue = ({
   billingFrequency: string;
   selectedPlan: PlanType;
 }) => {
-  const discountPercent = discount * 100;
-  const priceMultiplier = billingFrequency === 'year' ? 1 - discountPercent : 1;
+  const priceMultiplier = billingFrequency === 'annually' ? 1 - discount : 1;
   const computedPrice = selectedPlan.price * priceMultiplier;
   const formattedPrice = priceFormater(computedPrice);
 

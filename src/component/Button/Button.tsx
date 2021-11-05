@@ -1,7 +1,11 @@
 import React from 'react';
-import { StyledButton } from './Button.css';
+import { StyledButton, ButtonDiv } from './Button.css';
 const Button = () => {
-  return <StyledButton>Start my trial</StyledButton>;
+  return (
+    <ButtonDiv>
+      <StyledButton>Start my trial</StyledButton>
+    </ButtonDiv>
+  );
 };
 
 export default Button;
