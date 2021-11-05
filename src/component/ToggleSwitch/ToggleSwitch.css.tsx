@@ -7,6 +7,8 @@ export const DiscountSpan = styled.span`
   border-radius: 9.5px;
   font-weight: 800;
   font-size: 10px;
+  margin-left: 1em;
+  padding: 0.5em;
   line-height: 14px;
   color: #ff8d68;
   text-align: center;
@@ -42,6 +44,7 @@ export const RadioSwitchLabel = styled.label`
       content: '';
       height: 2em;
       overflow: hidden;
+
       pointer-events: none;
       position: absolute;
       vertical-align: middle;
@@ -50,6 +53,7 @@ export const RadioSwitchLabel = styled.label`
       background: #fff;
       border-radius: 100%;
       position: absolute;
+
       transition: right 0.2s ease-in-out;
       right: 2px;
       top: 2px;
@@ -58,8 +62,8 @@ export const RadioSwitchLabel = styled.label`
       z-index: 2;
     }
     &::after {
-      background: #7aeadf;
       border-radius: 1em;
+      background: #7aeadf;
       margin: 0 1em;
       transition: background 0.2s ease-in-out;
       width: 4em;
@@ -77,6 +81,7 @@ export const RadioSwitch = styled.fieldset`
   padding: 0;
   white-space: nowrap;
   font-size: 0.825rem;
+
   &:focus-within ${RadioSwitchLabel} {
     :first-of-type {
       &::after {

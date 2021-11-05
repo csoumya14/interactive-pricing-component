@@ -5,6 +5,7 @@ import {
   Input,
   RadioSwitchLabel,
   VisuallyHiddenLegend,
+  DiscountSpan,
 } from './ToggleSwitch.css';
 
 const ToggleSwitch = ({
@@ -38,7 +39,10 @@ const ToggleSwitch = ({
           checked={billingFrequency === 'annually'}
           onChange={event => handleToggleChange(event.target.value)}
         />
-        <RadioSwitchLabel htmlFor="annually">Annually</RadioSwitchLabel>
+        <RadioSwitchLabel htmlFor="annually">
+          Annually
+          <DiscountSpan>25%</DiscountSpan>
+        </RadioSwitchLabel>
       </RadioSwitchInner>
     </RadioSwitch>
   );

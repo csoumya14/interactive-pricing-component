@@ -27,12 +27,11 @@ const makeLongShadow = (color: string, size: string) => {
 export const Input = styled.input`
   display: block;
   appearance: none;
-
-  width: 100%;
+  width: 90%;
   margin: 0;
   height: ${height};
   cursor: pointer;
-
+  border-radius: 50px;
   &:focus {
     outline: none;
   }

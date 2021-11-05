@@ -15,4 +15,16 @@ export const Form = styled.form`
   background: #ffffff;
   width: 100%;
   padding: 2.2rem;
+  border: 1px solid red;
+`;
+
+export const LineDiv = styled.div`
+  border-top: 1px solid #979797;
+  width: 90vw;
+`;
+
+export const Line = styled.hr`
+  height: 1px;
+  border: 0;
+  background: black;
 `;
