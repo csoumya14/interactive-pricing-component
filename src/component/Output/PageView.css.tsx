@@ -9,4 +9,8 @@ export const Output = styled.output`
   @media (min-width: ${props => props.theme.mediaSize.md}) {
     font-size: 14px;
   }
+  @media (min-width: ${props => props.theme.mediaSize.lg}) {
+    margin-top: 0rem;
+    align-self: flex-start;
+  }
 `;

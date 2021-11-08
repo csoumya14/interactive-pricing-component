@@ -1,6 +1,6 @@
 import React from 'react';
 import { PlanType } from '../../BillingPlan';
-import { Price, YearOrMonth } from './PriceValue.css';
+import { Price, YearOrMonth, OutputElement } from './PriceValue.css';
 import { priceFormater, discount } from '../../helpers/priceFormater';
 
 const PriceValue = ({
@@ -15,9 +15,9 @@ const PriceValue = ({
   const formattedPrice = priceFormater(computedPrice);
 
   return (
-    <output htmlFor="plan-select billing-frequency">
+    <OutputElement htmlFor="plan-select billing-frequency">
       <Price>{formattedPrice}</Price> <YearOrMonth>/month</YearOrMonth>
-    </output>
+    </OutputElement>
   );
 };
 export default PriceValue;

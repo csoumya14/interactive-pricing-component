@@ -33,3 +33,8 @@ export const LineDiv = styled.div`
     width: 50vw;
   }
 `;
+
+export const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

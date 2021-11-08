@@ -112,10 +112,28 @@ export const Input = styled.input`
 
 export const Div = styled.div`
   margin-top: 1rem;
-  width: 90%;
+  width: 60%;
   height: 5rem;
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: visible;
+  position: absolute;
   display: flex;
   align-items: center;
+  @media (min-width: ${props => props.theme.mediaSize.md}) {
+    width: 40%;
+  }
+`;
+
+export const VisuallyHiddenLabel = styled.label`
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 `;

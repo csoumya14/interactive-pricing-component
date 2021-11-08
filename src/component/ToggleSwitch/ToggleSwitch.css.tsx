@@ -90,6 +90,9 @@ export const RadioSwitch = styled.fieldset`
       }
     }
   }
+  @media (min-width: ${props => props.theme.mediaSize.lg}) {
+    margin-top: 5rem;
+  }
 `;
 
 /*

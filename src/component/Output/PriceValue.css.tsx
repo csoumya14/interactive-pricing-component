@@ -17,3 +17,11 @@ export const YearOrMonth = styled.span`
     font-size: 16px;
   }
 `;
+
+export const OutputElement = styled.output`
+  margin-top: 5rem;
+  @media (min-width: ${props => props.theme.mediaSize.lg}) {
+    margin-top: -2rem;
+    align-self: flex-end;
+  }
+`;

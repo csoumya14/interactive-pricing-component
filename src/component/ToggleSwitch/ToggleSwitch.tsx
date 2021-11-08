@@ -7,7 +7,7 @@ import {
   VisuallyHiddenLegend,
   DiscountSpan,
 } from './ToggleSwitch.css';
-
+import { useViewPort } from '../../helpers/customViewPort';
 const ToggleSwitch = ({
   billingFrequency,
   setSelectedBillingFrequency,
@@ -18,9 +18,12 @@ const ToggleSwitch = ({
   const handleToggleChange = (value: string) => {
     setSelectedBillingFrequency(value);
   };
+
+  const [width] = useViewPort();
+  const breakPoint = 768;
   return (
     <RadioSwitch>
-      <VisuallyHiddenLegend>Payment frequency</VisuallyHiddenLegend>
+      <VisuallyHiddenLegend>Billing frequency</VisuallyHiddenLegend>
       <RadioSwitchInner>
         <Input
           type="radio"
@@ -39,10 +42,17 @@ const ToggleSwitch = ({
           checked={billingFrequency === 'annually'}
           onChange={event => handleToggleChange(event.target.value)}
         />
-        <RadioSwitchLabel htmlFor="annually">
-          Annually
-          <DiscountSpan>25%</DiscountSpan>
-        </RadioSwitchLabel>
+        {width > breakPoint ? (
+          <RadioSwitchLabel htmlFor="annually">
+            Annually
+            <DiscountSpan>25% discount</DiscountSpan>
+          </RadioSwitchLabel>
+        ) : (
+          <RadioSwitchLabel htmlFor="annually">
+            Annually
+            <DiscountSpan>25%</DiscountSpan>
+          </RadioSwitchLabel>
+        )}
       </RadioSwitchInner>
     </RadioSwitch>
   );
