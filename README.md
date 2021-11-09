@@ -13,9 +13,8 @@ This is a solution to the [Interactive Pricing Component challenge on Frontend M
   - [Links](#links)
 
   - [Tech Used/Dependencies](#tech-used)
-  - [What I learned](#what-i-learned)
-  - [Todos](#Todo)
-  - [Useful resources](#useful-resources)
+  
+ 
 
 - [Acknowledgments](#acknowledgments)
 
