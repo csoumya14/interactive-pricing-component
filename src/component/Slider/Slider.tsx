@@ -1,7 +1,7 @@
 import React, { ChangeEvent, Dispatch, SetStateAction } from 'react';
 import { PlanType } from '../../BillingPlan';
 import billingPlans from '../../data/billingPlanData';
-import { Input, Div } from './Slider.css';
+import { Input, Div, VisuallyHiddenLabel } from './Slider.css';
 
 const Slider = ({
   selectedPlan,
@@ -21,6 +21,7 @@ const Slider = ({
   };
   return (
     <Div>
+      <VisuallyHiddenLabel htmlFor="plan-select">Billing frequency</VisuallyHiddenLabel>
       <Input
         type="range"
         min="1"

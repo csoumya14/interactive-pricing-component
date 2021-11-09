@@ -11,5 +11,8 @@ export const Div = styled.div`
   background-position: 50% 30%;
   top: 0px;
   z-index: -1;
-  border-bottom-left-radius: 30%;
+  border-bottom-left-radius: 40%;
+  @media (min-width: ${props => props.theme.mediaSize.md}) {
+    border-bottom-left-radius: 30%;
+  }
 `;

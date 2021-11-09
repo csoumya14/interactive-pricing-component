@@ -19,9 +19,9 @@ function App() {
   return (
     <ThemeProvider theme={myTheme}>
       <GlobalStyle />
+      <Header />
       <Main>
         <TopBackground />
-        <Header />
         <SliderToggle />
       </Main>
     </ThemeProvider>
