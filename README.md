@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-Live Site URL: [Live site of the challenge hosted here](https://interactive-pricing-component-beige-three.vercel.app/)
+Live Site URL: (https://interactive-pricing-component-beige-three.vercel.app/)
 
 ### Tech Used/Dependencies
 
